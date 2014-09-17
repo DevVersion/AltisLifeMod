@@ -118,22 +118,22 @@ switch (_shop) do
 	case "adac_car": 
 	{
 		if(__GETC__(life_adaclevel) > 0) then {
-			_return set[count _return, ["C_Offroad_01_F",30000]];
+			_return set[count _return, ["C_Offroad_01_F",10000]];
 		};
 
 		if(__GETC__(life_adaclevel) > 1) then {
-			_return set[count _return, ["C_SUV_01_F",50000]];
+			_return set[count _return, ["C_SUV_01_F",30000]];
 		};
 
 		if(__GETC__(life_adaclevel) > 2) then {
-			_return set[count _return, ["B_Truck_01_mover_F",700000]];
+			_return set[count _return, ["B_Truck_01_mover_F",640000]];
 		};
 
 		if(__GETC__(life_adaclevel) > 3) then {
-			_return set[count _return, ["B_Heli_Light_01_F",100000]];
+			_return set[count _return, ["B_Heli_Light_01_F",400000]];
 		};
 		if(__GETC__(life_adaclevel) > 4) then {
-			_return set[count _return, ["O_Heli_Light_02_unarmed_F",170000]];
+			_return set[count _return, ["O_Heli_Light_02_unarmed_F",750000]];
 		};
 	};
 	
