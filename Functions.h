@@ -223,6 +223,9 @@ class Life_Client_Core
 		class saveGear {};
 		class loadGear {};
 		class stripDownPlayer {};
+
+		// Market System
+		class randomRound {};
 	};
 	
 	class Network
@@ -402,4 +405,23 @@ class Life_Client_Core
 		class vehicleGarage {};
 		class gangDeposit {};
 	};
+	
+	class Market {
+		file = "core\market";
+
+		class openMarketView;
+		class refreshMarketView;
+		class marketShortView;
+		class marketBuy;
+		class marketSell;
+		class marketGetBuyPrice;
+		class marketGetSellPrice;
+		class marketconfiguration;
+		class marketReset;
+		class marketChange;
+		class marketGetRow;
+		class marketGetPriceRow;
+		class marketSetPriceRow;
+	};
 };
+
