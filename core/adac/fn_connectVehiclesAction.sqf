@@ -7,7 +7,7 @@
 */
 private["_vehPlayer", "_veh"];
 
-_vehPlayer = _this select 0;
+_vehPlayer = vehicle player;
 
 _veh = (nearestObjects [[(getPos _vehPlayer) select 0, (getPos _vehPlayer) select 1, 0], ["Car","Truck", "Air"], 5]) select 0;
 _veh attachTo [_vehPlayer, [0,0,-3.3]];
