@@ -2,8 +2,6 @@
 ================
 
 TODO List: 
- - Ingenieur Lizenz
- - Gang Disband
  - Puff (xD)
  - Weibliche Characters
  - Sportfliegen
