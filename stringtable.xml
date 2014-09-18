@@ -5102,5 +5102,11 @@
 		<Key ID="STR_pAct_AdacDeAttach">
 			<Original>Seil trennen</Original>
 		</Key>
+		<Key ID="STR_License_Repair">
+			<Original>Ingenieurausbildung</Original>
+		</Key>
+		<Key ID="STR_License_Repair_NoLicense">
+			<Original>Du hast keine Ingenieurausbildung!</Original>
+		</Key>
 	<Package>
 </Project>
