@@ -34,7 +34,8 @@ switch (_vehicle) do
 			[_path + "hatchback_01_ext_sport05_co.paa","civ"],
 			[_path + "hatchback_01_ext_sport06_co.paa","civ"],
 			["textures\vehicles\hatchback_blau.jpg", "cop"],
-			["textures\vehicles\hatchback_gruen.jpg", "cop"]
+			["textures\vehicles\hatchback_gruen.jpg", "cop"],
+			["textures\vehicles\hatchback_adac.jpg", "adac"]
 		];
 	};
 		

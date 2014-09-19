@@ -117,6 +117,7 @@ switch (_shop) do
 	// ADAC CAR
 	case "adac_car": 
 	{
+
 		if(__GETC__(life_adaclevel) > 0) then {
 			_return set[count _return, ["C_Offroad_01_F",10000]];
 		};
@@ -127,6 +128,7 @@ switch (_shop) do
 
 		if(__GETC__(life_adaclevel) > 2) then {
 			_return set[count _return, ["B_Truck_01_mover_F",640000]];
+			_return set[count _return, ["C_Hatchback_01_sport_F",44000]];
 		};
 
 		if(__GETC__(life_adaclevel) > 3) then {
