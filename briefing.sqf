@@ -25,15 +25,27 @@ player createDiarySubject ["controls","Steuerung"];
 		[
 			"",
 				"
+
+				Zivilisten Steuerung
+				<br/><br/>
+
 				Z: Player Menü <br/>
-				U: Lock and unlock cars<br/>
-				F: Cop Siren (if cop)<br/>
-				T: Vehicle Trunk<br/>
-				Left Shift + R: Restrain (Cop Only)<br/>
-				Left Shift + G: Knock out / stun (Civ Only, used for robbing them)<br/>
-				Left Windows: Main Interaction key which is used for picking up items/money, gathering, interacting with cars (repair,etc) and for cops to interact with civilians. Can be rebound to a single key like H by pressing ESC->Configure->Controls->Custom->Use Action 10<br/>
-				Left Shift + L: Activates cop siren lights (as a cop).<br/>
-				Left Shift + H: Holster's your pistol<br/>
+				U: Abschließen und Aufsperren<br/>
+				T: Fahrzeug Kofferraum<br/>
+				Links Shift + R: Festnehmen (Vorher Niederschlagen..)<br/>
+				Links Shift + G: Niederschlagen (Ausrauben und Festnehmen)<br/>
+				Links Windows Taste: Haupt Interaktions-Menü<br/>
+				Links Shift + H: Waffe wegstecken</br>
+
+				<br/><br/>
+
+				<b>Polizei Steuerung</b>
+
+				<br/><br/>
+
+				Links Shift + L: Polizei Sirene an/-abschalten<br/>	
+				Links Shift + R: Festnehmen<br/>
+				Links Shift + L: Blaulicht aktivieren<br/>	
 				"
 		]
 	];
