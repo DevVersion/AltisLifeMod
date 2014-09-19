@@ -2,6 +2,6 @@
 ================
 
 TODO List: 
- - Puff (xD)
- - Weibliche Characters
  - Sportfliegen
+ - Gelddruckerei 
+ - Geld Transport einmal die Woche
