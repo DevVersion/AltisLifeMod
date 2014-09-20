@@ -107,6 +107,9 @@ class Life_Client_Core
 		class robAction {};
 		class captureHideout {};
 		class gather {};
+
+		//FASTROPE FUNCTION
+		class fastRope {};
 	};
 	
 	class Housing
