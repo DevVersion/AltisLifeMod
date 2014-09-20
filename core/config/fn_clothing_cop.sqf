@@ -19,31 +19,40 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
-		_ret set[count _ret,["U_Rangemaster","Cop Uniform",25]];
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam_tshirt",nil,350]];
+		_ret set[count _ret,["U_Rangemaster","Uniform",25]];
+
+		if(__GETC__(life_coplevel) > 4) then {
+			_ret set[count _ret,["U_B_CombatUniform_mcam",nil,550]];
 			_ret set[count _ret,["U_B_survival_uniform",nil,1250]];
-		};
-		if(__GETC__(life_coplevel) > 2) then
-		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam_worn",nil,550]];
+			_ret set[count _ret,["U_B_CombatUniform_mcam_tshirt",nil,350]];
 		};
 	};
 	
 	//Hats
 	case 1:
 	{
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret set[count _ret,["H_HelmetB_plain_mcamo",nil,75]];
-			_ret set[count _ret,["H_Booniehat_mcamo",nil,120]];
-		};
-		
-		if(__GETC__(life_coplevel) > 2) then
-		{
+
+		_ret set[count _ret, ["H_Beret_blk", "Barett Schwarz",100]];
+		_ret set[count _ret, ["H_Beret_blk_POLICE", "Barett Polizei",100]];
+
+		if(__GETC__(life_coplevel) > 2) then {
 			_ret set[count _ret,["H_MilCap_mcamo",nil,100]];
 		};
+
+		if(__GETC__(life_coplevel) > 5) then {
+			_ret set[count _ret,["H_HelmetB",nil,2000]];
+			_ret set[count _ret,["H_HelmetB_light",nil,2000]];
+			_ret set[count _ret,["H_Booniehat_mcamo",nil,120]];
+		};
+
+		if(__GETC__(life_coplevel) > 8) then {
+			_ret set[count _ret, ["H_PilotHelmetFighter_B",nil,2000]];
+			_ret set[count _ret, ["H_PilotHelmetHeli_B",nil,2000]];
+		};
+
+		if(__GETC__(life_coplevel) > 11) then {
+			_ret set[count _ret, ["H_Beret_Colonel","Polizei Barett",100]];
+		}
 	};
 	
 	//Glasses
@@ -68,12 +77,13 @@ switch (_filter) do
 	case 3:
 	{
 		_ret set[count _ret,["V_Rangemaster_belt",nil,800]];
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret set[count _ret,["V_PlateCarrier2_rgr",nil,1500]];
+
+		if(__GETC__(life_coplevel) > 4) then {
+			_ret set[count _ret,["V_I_G_resistanceLeader_F",nil,1500]];
+			_ret set[count _ret,["V_PlateCarrierH_CTRG",nil,1500]];
 		};
-		if(__GETC__(life_coplevel) > 6) then {
-			_ret set[count ret, ["V_PlateCarrierIAGL_dgtl",nil,1500]];
+		if(__GETC__(life_coplevel) > 7) then {
+			_ret set[count ret, ["V_PlateCarrierIA2_dgtl",nil,1500]];
 		};
 	};
 	
@@ -82,11 +92,19 @@ switch (_filter) do
 	{
 		_ret =
 		[
-			["B_Kitbag_cbr",nil,800],
+			["B_TacticalPack_rgr",nil,2000],
+			["B_Kitbag_cbr",nil,2000],
+			["B_Kitbag_sgg",nil,2000],
+			["B_Kitbag_mcamo",nil,2000],
 			["B_FieldPack_cbr",nil,500],
 			["B_AssaultPack_cbr",nil,700],
 			["B_Bergen_sgg",nil,2500],
-			["B_Carryall_cbr",nil,3500]
+			["B_Carryall_cbr",nil,5000],
+			["B_Carryall_khk",nil,5000],
+			["B_Carryall_oli",nil,5000],
+			["B_Carryall_mcamo",nil,5000],
+			["B_Carryall_oucamo",nil,5000],
+			["B_Carryall_ocamo",nil,5000]
 		];
 	};
 };

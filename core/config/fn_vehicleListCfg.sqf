@@ -138,7 +138,7 @@ switch (_shop) do
 			_return set[count _return, ["C_Hatchback_01_sport_F",30000]];
 			_return set[count _return, ["B_MRAP_01_F",400000]];
 		};
-		if(__GETC__(life_coplevel) > 6) then {
+		if(__GETC__(life_coplevel) > 7) then {
 			_return set[count _return, ["B_MRAP_01_hmg_F",733300]];
 		};
 		if(__GETC__(life_coplevel) > 10) then {
