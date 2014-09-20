@@ -12,7 +12,7 @@ life_market_resources = [
 	//Schema: SHORTNAME, Default, Min, Max, changes in action, [Sales multiplied by 1, Purchase multiplied by -1]
 	//["gold", 1500, 450, 2300, 8, 5],
 	
-	["oilp", 8000, 6900, 9200, 4, 2,
+	["oilp", 5000, 4000, 7000, 4, 2,
 		[
 			["diamondc",1],
 			["iron_r",1],
@@ -20,7 +20,7 @@ life_market_resources = [
 		]
 	],
 	
-	["iron_r", 4100, 3700, 5000, 4, 4,  
+	["iron_r", 3500, 2200, 5000, 4, 4,  
 		[ 
 			["diamondc",1], 
 			["oilp",1],
@@ -31,7 +31,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["diamondc", 7500, 6000, 10000, 4, 2, 
+	["diamondc", 4500, 3000, 7000, 4, 2, 
 		[ 
 			["oilp",1],
 			["iron_r",1],
@@ -40,7 +40,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["copper_r", 2400, 1650, 3700, 4, 4,
+	["copper_r", 2300, 1600, 3700, 4, 4,
 		[ 
 			["diamondc",1], 
 			["oilp",1],
@@ -51,7 +51,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["salt_r", 2770, 2170, 3700, 4, 3,
+	["salt_r", 3300, 2500, 4500, 4, 3,
 		[ 
 			["diamondc",1], 
 			["oilp",1],
@@ -90,7 +90,7 @@ life_market_resources = [
 		] 
 	],
 
-	["marijuana", 6800, 6000, 8500, 4, 4,   
+	["marijuana", 5500, 4500, 8500, 4, 4,   
 		[ 
 			["turtle",1], 
 			["cocainep",1],
@@ -98,7 +98,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cocainep", 9500, 8000, 12000, 4, 4,   
+	["cocainep", 7600, 6500, 12000, 4, 4,   
 		[ 
 			["marijuana",1], 
 			["turtle",1],
@@ -106,7 +106,7 @@ life_market_resources = [
 		] 
 	],
 
-	["heroinp", 8500, 7800, 11000, 4, 4,   
+	["heroinp", 5200, 4200, 10000, 4, 4,   
 		[ 
 			["marijuana",1], 
 			["turtle",1],
