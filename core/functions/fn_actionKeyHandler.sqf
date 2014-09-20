@@ -7,7 +7,7 @@
 	Master action key handler, handles requests for picking up various items and
 	interacting with other players (Cops = Cop Menu for unrestrain,escort,stop escort, arrest (if near cop hq), etc).
 */
-private["_curTarget","_isWater"];
+private["_curTarget","_isWater", "_copLevel", "_adminLevel"];
 _curTarget = cursorTarget;
 if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 if(life_interrupted) exitWith {life_interrupted = false;};
@@ -40,10 +40,13 @@ life_action_inUse = true;
 	life_action_inUse = false;
 };
 
+_copLevel = call life_coplevel;
+_adminLevel = call life_adminlevel;
+
 //Check if its a dead body.
 if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent,east]}) exitWith {
 	//Hotfix code by ins0
-	if((life_adminlevel > 0 || life_coplevel > 10) || (playerSide == independent && {"Medikit" in (items player)})) then {
+	if((_adminLevel > 0 || _copLevel > 10) || (playerSide == independent && {"Medikit" in (items player)})) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
 };
