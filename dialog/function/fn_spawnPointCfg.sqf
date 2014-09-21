@@ -55,7 +55,7 @@ switch (_side) do
 
 if (_side != west) then {
 	if (license_civ_rebel) then {
-		_return pushBack ["reb_spawn_1", "Rebbeln HQ", "\a3\ui_f\data\map\MapControl\watertower_ca.paa"];
+		_return pushBack ["reb_spawn_1", "Rebellen HQ", "\a3\ui_f\data\map\MapControl\watertower_ca.paa"];
 	};	
 }; 
 
