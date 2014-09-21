@@ -5,4 +5,3 @@ TODO List:
  - Sportfliegen
  - Gelddruckerei 
  - Geld Transport einmal die Woche
- - Garage im Rebellen Gebiet
