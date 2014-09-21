@@ -6,4 +6,3 @@ TODO List:
  - Gelddruckerei 
  - Geld Transport einmal die Woche
  - Garage im Rebellen Gebiet
- - Automatisches Minen Bug beheben

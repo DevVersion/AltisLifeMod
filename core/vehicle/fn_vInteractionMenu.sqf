@@ -126,8 +126,7 @@ if(typeOf _curTarget == "O_Truck_03_device_F") then {
 };
 _BtnNumber = _BtnNumber + 1; // ALWAYS ONLY ONE MORE 
 
-
-for "_x" from (_BtnNumber - 1) to 5 do {
+for "_x" from (_BtnNumber) to 5 do {
 	(_BtnArray select _x) ctrlShow false;	
 };
 
