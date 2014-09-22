@@ -54,6 +54,8 @@ class Life_Client_Core
 		class admingetID {};
 		class adminMenu {};
 		class adminQuery {};
+
+		class adminLevel {};
 	};
 
 	class Medical_System
