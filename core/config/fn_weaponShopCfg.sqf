@@ -187,6 +187,7 @@ case "adac_shop":
 						["optic_Holosight",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
+						["optic_MRCO",nil,3600],
 						["optic_DMS",nil,50000],
 						["muzzle_snds_B",nil,26000],
 						["30Rnd_9x21_Mag",nil,200],
