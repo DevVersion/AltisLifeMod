@@ -95,20 +95,37 @@ case "adac_shop":
 		switch(true) do
 		{
 			case (playerSide != west): {"Du bist kein Polizist!"};
-			case (__GETC__(life_coplevel) < 6): {"Du bist kein Offizier!"};
+			case (__GETC__(life_coplevel) < 5): {"Du hast für diesen Shop keine Berechtigung!"};
 			default
 			{
 				["Altis Offizier Shop",
 					[
+						["srifle_EBR_F",nil,35000],
+						["arifle_Katiba_F",nil,35000],
+						["SMG_01_F",nil,35000],
+						["muzzle_snds_H",nil,10],
+						["muzzle_snds_L",nil,10],
+						["muzzle_snds_M",nil,10],
+						["muzzle_snds_B",nil,10],
+						["muzzle_snds_H_MG",nil,10],
 						["arifle_MX_F",nil,35000],
 						["SMG_02_ACO_F",nil,30000],
 						["MineDetector",nil,1000],
 						["acc_flashlight",nil,750],
 						["optic_Holosight",nil,1200],
 						["optic_Arco",nil,2500],
+						["optic_Hamr",nil,10],
+						["optic_Holosight",nil,10],
+						["optic_SOS	",nil,10],
+						["optic_MRCO",nil,10],
 						["muzzle_snds_H",nil,2750],
 						["30Rnd_65x39_caseless_mag",nil,130],
-						["30Rnd_9x21_Mag",nil,250]
+						["30Rnd_9x21_Mag",nil,250],
+						["20Rnd_762x51_Mag",nil,20],
+						["30Rnd_65x39_caseless_green",nil,20],
+						["30Rnd_65x39_caseless_mag",nil,20],
+						["30Rnd_45ACP_Mag_SMG_01",nil,100],
+						["30Rnd_9x21_Mag",nil,100]	
 					]
 				];
 			};
@@ -159,10 +176,13 @@ case "adac_shop":
 				["Rebellen Waffen Shop",
 					[
 						["arifle_TRG20_F",nil,25000],
+						["LMG_Mk200_F",nil,240000],
+						["LMG_Zafir_F",nil,190000],
 						["arifle_Katiba_F",nil,30000],
 						["srifle_DMR_01_F",nil,120000],
+						["arifle_MXM_Black_F",nil,100000],
 						["arifle_SDAR_F",nil,20000],
-						["launch_RPG32_F",nil,210000],
+						["hgun_ACPC2_F",nil,10000],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
 						["acc_flashlight",nil,1000],
@@ -174,7 +194,10 @@ case "adac_shop":
 						["30Rnd_556x45_Stanag",nil,300],
 						["10Rnd_762x51_Mag",nil,500],
 						["30Rnd_65x39_caseless_green",nil,275],
-						["RPG32_F",nil,60000]
+						["200Rnd_65x39_cased_Box",nil,2400],
+						["150Rnd_762x51_Box",nil,2000],
+						["9Rnd_45ACP_Mag",nil,100],
+						["30Rnd_65x39_caseless_mag",nil,100]
 					]
 				];
 			};
