@@ -106,11 +106,15 @@ switch (_code) do
 
 		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent,east]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
-			[] call life_fnc_restrainAction;
+			if (!(player getVariable ["restrained",false])) then {
+				[] call life_fnc_restrainAction;
+			}
 		};
 
 		if (_shift && playerSide != west && (animationState cursorTarget) == "Incapacitated" && license_civ_rebel && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1 && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "") then {
-			[] call life_fnc_restrainAction;
+			if (!(player getVariable ["restrained",false])) then {
+				[] call life_fnc_restrainAction;
+			}
 		};
 	};
 	
