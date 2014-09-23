@@ -116,7 +116,7 @@ case "adac_shop":
 						["optic_Arco",nil,2500],
 						["optic_Hamr",nil,10],
 						["optic_Holosight",nil,10],
-						["optic_SOS	",nil,10],
+						["optic_SOS",nil,10],
 						["optic_MRCO",nil,10],
 						["muzzle_snds_H",nil,2750],
 						["30Rnd_65x39_caseless_mag",nil,130],
