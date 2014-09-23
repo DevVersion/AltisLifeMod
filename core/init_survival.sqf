@@ -44,13 +44,24 @@
 
 [] spawn
 {
-	private["_bp","_load","_cfg"];
+	private["_bp","_load","_cfg", "_40", "_31"];
 	while{true} do
 	{
 		waitUntil {backpack player != ""};
 		_bp = backpack player;
 		_cfg = getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload");
 		_load = round(_cfg / 8);
+
+		_40 = ["B_Carryall_cbr", "B_Carryall_khk", "B_Carryall_oli", "B_Carryall_mcamo", "B_Carryall_oucamo", "B_Carryall_ocamo", "B_Kitbag_sgg"];
+		_31 = ["B_Kitbag_cbr", "B_Kitbag_mcamo", "B_Bergen_sgg", "B_FieldPack_ocamo", "B_TacticalPack_oli", "B_AssaultPack_cbr"];
+
+		if ((backpack player) in _40) then {
+			_load = 40;
+		};
+		if ((backpack player) in _31) then {
+			_load = 31;
+		};
+
 		life_maxWeight = life_maxWeightT + _load;
 		waitUntil {backpack player != _bp};
 		if(backpack player == "") then 

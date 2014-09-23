@@ -32,7 +32,7 @@ life_removeWanted = false;
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?
-__CONST__(life_save_yinv,FALSE); //Save Y-Inventory for players?
+__CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?
 
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you dont want cops to be able to revive downed players.
@@ -53,8 +53,8 @@ life_clothing_purchase = [-1,-1,-1,-1,-1];
 ****** Weight Variables *****
 *****************************
 */
-life_maxWeight = 24; //Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
-life_maxWeightT = 24; //Static variable representing the players max carrying weight on start.
+life_maxWeight = 104; //Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
+life_maxWeightT = 64; //Static variable representing the players max carrying weight on start.
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
 /*
