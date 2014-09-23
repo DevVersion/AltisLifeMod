@@ -141,7 +141,7 @@ class life_admin_menu {
 			colorText[] = {1,1,1,1};
 			colorBackground[] = {0,0,0,0.8};
 		};
-		class LevelInput: Life_RscEdit
+		class AdminLevelInput: Life_RscEdit
 		{
 			idc = 9334;
 			x = 32 * GUI_GRID_W + GUI_GRID_X;
