@@ -63,6 +63,9 @@ if(count life_spawn_point == 0) then
 	titleText[format["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 };
 
+/* INTRO CAM */
+[] spawn life_fnc_introCam;
+
 if(life_firstSpawn) then {
 	life_firstSpawn = false;
 	[] call life_fnc_welcomeNotification;

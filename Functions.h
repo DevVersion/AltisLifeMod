@@ -234,6 +234,9 @@ class Life_Client_Core
 
 		// AUTOSAVE
 		class autoSave {};
+
+		// IntroCam
+		class introCam {};
 	};
 	
 	class Network
