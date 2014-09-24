@@ -82,7 +82,7 @@ _units = _units - [player];
 							case 9: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
 							case 10: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
 							case 11: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
-							case 12: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+							case 12: {"icons\icon_chief.paa"};
 							default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};	
 						}
 					];

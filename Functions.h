@@ -231,6 +231,9 @@ class Life_Client_Core
 
 		// Market System
 		class randomRound {};
+
+		// AUTOSAVE
+		class autoSave {};
 	};
 	
 	class Network
