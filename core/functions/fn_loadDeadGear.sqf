@@ -61,3 +61,5 @@ if(_handgun != "") then {[_handgun,true,false,false,false] spawn life_fnc_handle
 
 if(_headgear != "") then {player addHeadGear _headgear};
 if(_goggles != "") then {player addGoggles _goggles};
+
+[] call life_fnc_saveGear;

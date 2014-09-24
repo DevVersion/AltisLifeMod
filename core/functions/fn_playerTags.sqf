@@ -37,21 +37,73 @@ _units = _units - [player];
 		_distance = _pos distance player;
 		if(count _sPos > 1 && {_distance < 15}) then {
 			_text = switch (true) do {
-				case (_x in (units grpPlayer) && playerSide == civilian): {format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];};
-				case (!isNil {(_x getVariable "rank")}): {format["<img image='%1' size='1'></img> %2",switch ((_x getVariable "rank")) do {
-					case 2: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
-					case 3: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
-					case 4: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
-					case 5: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
-					case 6: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
-					case 7: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
-					case 8: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
-					default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
-					},_x getVariable ["realname",name _x]]};
-				case ((!isNil {_x getVariable "name"} && playerSide == independent)): {format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",_x getVariable ["name","Unknown Player"]]};
+
+				/* PLAYER MASK */
+
+				case ((headgear _x) in ["H_Shemag_olive", "H_Shemag_khk", "H_ShemagOpen_khk", "H_ShemagOpen_tan"]): {
+					format["<t color='#404040'>Maskierter</t>"];
+				};
+
+				/* PLAYER STANDARD NAME */
+
+				case (_x in (units grpPlayer) && playerSide == civilian): {
+					format["<t color='#00FF00'>%1</t>",(_x getVariable ["realname",name _x])];
+				};
+				
+				/* POLIZEI RANKS */
+
+				case (!isNil {(_x getVariable "rank")}): {
+					format[
+						"<img image='%3' size='1'></img> %1<br/><t size='0.8' color='#B6B6B6'>%2</t>",
+						_x getVariable ["realname",name _x],
+						switch ((_x getVariable "rank")) do {
+							case 1: {"Rekrut"};
+							case 2: {"Wachtmeister"};
+							case 3: {"Oberwachtmeister"};
+							case 4: {"Hauptwachtmeister"};
+							case 5: {"Kommissar"};
+							case 6: {"Oberkommissar"};
+							case 7: {"Hauptkommissar"};
+							case 8: {"SEK"};
+							case 9: {"Luftwaffe"};
+							case 10: {"Offizier"};
+							case 11: {"Polizeileitung"};
+							case 12: {"Operator"};
+						},
+						switch ((_x getVariable "rank")) do {
+							case 1: {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
+							case 2: {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
+							case 3: {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
+							case 4: {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};
+							case 5: {"\a3\ui_f\data\gui\cfg\Ranks\corporal_gs.paa"}; 
+							case 6: {"\a3\ui_f\data\gui\cfg\Ranks\sergeant_gs.paa"};
+							case 7: {"\a3\ui_f\data\gui\cfg\Ranks\lieutenant_gs.paa"};
+							case 8: {"\a3\ui_f\data\gui\cfg\Ranks\captain_gs.paa"};
+							case 9: {"\a3\ui_f\data\gui\cfg\Ranks\major_gs.paa"};
+							case 10: {"\a3\ui_f\data\gui\cfg\Ranks\colonel_gs.paa"};
+							case 11: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+							case 12: {"\a3\ui_f\data\gui\cfg\Ranks\general_gs.paa"};
+							default {"\a3\ui_f\data\gui\cfg\Ranks\private_gs.paa"};	
+						}
+					];
+				};	
+
+				/* MEDIC ICON */
+
+				case ((!isNil {_x getVariable "name"} && playerSide == independent)): {
+					format["<t color='#FF0000'><img image='a3\ui_f\data\map\MapControl\hospital_ca.paa' size='1.5'></img></t> %1",
+						_x getVariable ["name","Unbekannter Spieler"]
+					]
+				};
+
+				/* GANG NAME AND PLAYER NAME */
+
 				default {
 					if(!isNil {(group _x) getVariable "gang_name"}) then {
-						format["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",_x getVariable ["realname",name _x],(group _x) getVariable ["gang_name",""]];
+						format["%1<br/><t size='0.8' color='#B6B6B6'>%2</t>",
+							_x getVariable ["realname",name _x],
+							(group _x) getVariable ["gang_name",""]
+						];
 					} else {
 						_x getVariable ["realname",name _x];
 					};
