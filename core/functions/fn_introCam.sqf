@@ -3,10 +3,10 @@
 	Author: Paul Gschwendtner
 */
 private ["_camera", "_camDistance","_randCamX","_randCamY","_camTime"];
-_camDistance = 65;
+_camDistance = 100;
 _randCamX = 75 - floor(random 150);
 _randCamY = 75 - floor(random 150);
-_camTime = 10;// you can change the time for sure, I adjusted mine to the intro music
+_camTime = 20;// you can change the time for sure, I adjusted mine to the intro music
 
 if(!life_firstSpawn) then {
 	_camTime = 10;

@@ -41,7 +41,7 @@ _units = _units - [player];
 				/* PLAYER MASK */
 
 				case ((headgear _x) in ["H_Shemag_olive", "H_Shemag_khk", "H_ShemagOpen_khk", "H_ShemagOpen_tan"]): {
-					format["<t color='#DE2E01'>Maskierter</t>"];
+					format["<t color='#404040'>Maskierter</t>"];
 				};
 
 				/* PLAYER STANDARD NAME */
