@@ -112,6 +112,9 @@ class Life_Client_Core
 
 		//FASTROPE FUNCTION
 		class fastRope {};
+
+		// ORGAN
+		class takeOrgans {};
 	};
 	
 	class Housing
@@ -267,6 +270,9 @@ class Life_Client_Core
 		class removeLicenses {};
 		class demoChargeTimer {};
 		class civLoadout {};
+
+		//ORGAN
+		class hasOrgan {};
 	};
 	
 	class Vehicle

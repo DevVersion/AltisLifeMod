@@ -26,4 +26,5 @@ case "market": {["Altis Markt",["water","rabbit","apple","redgull","tbacon","loc
 	case "adac": {["ADAC Item Shop",["donuts","coffee","water","rabbit","apple","redgull","fuelF"]]};
 	case "cement": {["Zement Dealer",["cement"]]};
 	case "gold": {["Gold Käufer",["goldbar"]]};
+	case "organ": {["Organschmuggler",["kidney"]]}; 
 };
