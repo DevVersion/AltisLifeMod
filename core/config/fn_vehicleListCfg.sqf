@@ -116,7 +116,6 @@ switch (_shop) do
 			["B_Quadbike_01_F",1000],
 			["B_G_Offroad_01_F",12000],
 			["O_MRAP_02_F",800000],
-			["B_MRAP_01_F", 880000],
 			["B_Heli_Light_01_F",533000],
 			["B_G_Offroad_01_armed_F",666000],
 			["O_Truck_03_covered_F", 1500000]
