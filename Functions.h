@@ -310,6 +310,10 @@ class Life_Client_Core
 		class deconnectVehiclesAction {};
 
 		class adacMarkers {};
+
+		// SIRENLIGHTS
+		class adacLights {};
+		class adacSirenLights {};
 	};
 
 	class Cop

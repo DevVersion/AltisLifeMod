@@ -57,7 +57,15 @@ switch (_vehicle) do
 			["textures\vehicles\offroad_adac.jpg", "adac"]
 		];
 	};
-	
+
+	case "C_Offroad_01_repair_F": 
+	{
+		_ret = 
+		[
+			["textures\vehicles\offroad_adac.jpg", "adac"]
+		];
+	};
+
 	case "I_G_Offroad_01_F":
 	{
 		_ret = 

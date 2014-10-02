@@ -31,6 +31,11 @@ switch (_vehicle) do
 		};
 	};
 	
+	case "C_Offroad_01_repair_F" : 
+	{
+		case 0: {_color = "ADAC"};
+	};
+
 	case "I_G_Offroad_01_F" :
 	{
 		switch (_index) do

@@ -60,7 +60,7 @@ switch (_shop) do
 	{
 
 		if(__GETC__(life_adaclevel) > 0) then {
-			_return set[count _return, ["C_Offroad_01_F",12000]];
+			_return set[count _return, ["C_Offroad_01_repair_F",12000]];
 		};
 
 		if(__GETC__(life_adaclevel) > 1) then {
