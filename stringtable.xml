@@ -4114,7 +4114,7 @@
 		<Key ID="STR_Medic_RevivePay">
 			<Original>%1 has revived you and a fee of $%2 was taken from your bank account for their services.</Original>
 			<English>%1 has revived you and a fee of $%2 was taken from your bank account for their services.</English>
-			<German>%1 hat dich wiederbelebt und dafür eine Gebühr von $%2 von deinem Bankkonto eingezogen.</German>
+			<German>%1 hat dich wiederbelebt und dafür eine Gebühr von $%2 von dener Krankenkasse eingezogen.</German>
 			<French>%1 vous à réanimé, les fraits de $%2 sont transféré depuit votre compte bancaire pour leurs services.</French>
 			<Italian>%1 ti ha rianimato e sono stati prelevati €%2 dal tuo conto in banca per pagare la prestazione.</Italian>
 			<Portuguese>%1 reviveu você e uma taxa de R$2% foi cobrada da sua conta bancária para os serviços prestados.</Portuguese>

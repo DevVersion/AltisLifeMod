@@ -35,8 +35,8 @@ __CONST__(life_save_civ,FALSE); //Save weapons for civs?
 __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?
 
 //Revive constant variables.
-__CONST__(life_revive_cops,TRUE); //Set to false if you dont want cops to be able to revive downed players.
-__CONST__(life_revive_fee,7000); //Fee for players to pay when revived.
+__CONST__(life_revive_cops,TRUE); //Isnt Important has been manually added to code...
+__CONST__(life_revive_fee,23000); //Fee for players to pay when revived.
 
 //House Limit
 __CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
