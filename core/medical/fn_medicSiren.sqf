@@ -21,6 +21,6 @@ while {true} do
 	if(!alive _vehicle) exitWith {};
 	if(isNull _vehicle) exitWith {};
 	_vehicle say3D "MedicSiren";
-	sleep 4.7;
+	sleep 4.694;
 	if(!(_vehicle getVariable "siren")) exitWith {};
 };
