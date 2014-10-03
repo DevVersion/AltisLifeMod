@@ -58,6 +58,12 @@ switch(playerSide) do {
 		__CONST__(life_coplevel, 0);
 		__CONST__(life_medicLevel, 0);
 		__CONST__(life_adacLevel,0);
+		
+		life_gangData = _This select 11;
+
+		if(count life_gangData != 0) then {
+			[] spawn life_fnc_initGang;
+		};
 	};
 	
 	case independent: {
@@ -83,12 +89,6 @@ life_houses = _this select 10;
 	life_vehicles pushBack _house;
 } foreach life_houses;
 		
-life_gangData = _This select 11;
-
-if(count life_gangData != 0) then {
-	[] spawn life_fnc_initGang;
-};
-
 [] spawn life_fnc_initHouses;
 
 

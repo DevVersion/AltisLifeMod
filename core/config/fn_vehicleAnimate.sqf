@@ -63,7 +63,10 @@ if(!_preset) then
 				waitUntil {!isNil {_vehicle getVariable "Life_VEH_color"}};
 			};
 			_vehicle animate ["HideServices", 0];
-			_vehicle animate ["HideDoor3", 1];
+			_vehicle animate ["HideDoor3", 0];
+			_vehicle animate ["HideDoor1", 0];
+			_vehicle animate ["HideDoor2", 0];
+
 			_vehicle setVariable["lights",false,true];			
 		};
 		case "cop_offroad":
