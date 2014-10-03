@@ -65,7 +65,7 @@ if (playerSide == east) then {
 	(_BtnArray select _BtnNumber) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_adacImpound;";
 	_BtnNumber = _BtnNumber + 1;
 
-	/*(_BtnArray select _BtnNumber) ctrlSetText localize "STR_vInAct_ConnectVehicles";
+	(_BtnArray select _BtnNumber) ctrlSetText localize "STR_vInAct_ConnectVehicles";
 	(_BtnArray select _BtnNumber) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_connectVehicles;";
 	_BtnNumber = _BtnNumber + 1;
 
@@ -75,7 +75,7 @@ if (playerSide == east) then {
 		(_BtnArray select _BtnNumber) ctrlSetText localize "STR_vInAct_DeConnectVehicles";
 		(_BtnArray select _BtnNumber) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deconnectVehicles;";
 		_BtnNumber = _BtnNumber + 1;
-	};*/
+	};
 };
 
 
