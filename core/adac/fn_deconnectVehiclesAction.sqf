@@ -14,7 +14,7 @@ private["_targetVehicle", "_otherVehicle", "_ZeroPos", "_vehPos"];
 	
 */
 
-_targetVehicle = _this select 0;
+_targetVehicle = vehicle player;
 _otherVehicle = _targetVehicle getVariable ["AttachedVehicle", _targetVehicle];
 
 if (_otherVehicle == _targetVehicle) exitWith { hint "Es ist kein Fahrzeug mit diesem Fahrzeug verbunden!"; };

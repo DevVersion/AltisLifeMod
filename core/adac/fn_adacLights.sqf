@@ -64,7 +64,7 @@ _brightness2 = 0.3;
 _leftRed = true;  
 while{ (alive _vehicle)} do  
 {  
-	if(!(_vehicle getVariable "serviceLights")) exitWith {};
+	if(!(_vehicle getVariable "lights")) exitWith {};
 	if(_leftRed) then  
 	{  
 		_leftRed = false;  
