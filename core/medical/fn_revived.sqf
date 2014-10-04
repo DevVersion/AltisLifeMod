@@ -12,18 +12,21 @@ _oldGear = [life_corpse] call life_fnc_fetchDeadGear;
 life_corpse setVariable["realname",nil,true]; //Should correct the double name sinking into the ground.
 [[life_corpse],"life_fnc_corpse",nil,FALSE] spawn life_fnc_MP;
 _dir = getDir life_corpse;
-hint format[localize "STR_Medic_RevivePay",_medic,[(call life_revive_fee)] call life_fnc_numberText];
 
 closeDialog 0;
 life_deathCamera cameraEffect ["TERMINATE","BACK"];
 camDestroy life_deathCamera;
 
-/*//Take fee for services.
-if(life_atmcash > (call life_revive_fee)) then {
-	life_atmcash = life_atmcash - (call life_revive_fee);
+if (license_civ_aok) then {
+	hint format[localize "STR_Medic_RevivePayAOK",_medic,[(call life_revive_fee)] call life_fnc_numberText];
 } else {
-	life_atmcash = 0;
-};*/
+	hint format[localize "STR_Medic_RevivePay",_medic,[(call life_revive_fee)] call life_fnc_numberText];
+	if(life_atmcash > (call life_revive_fee)) then {
+		life_atmcash = life_atmcash - ((call life_revive_fee) - 10000);
+	} else {
+		life_atmcash = 0;
+	};
+};
 
 //Bring me back to life.
 player setDir _dir;

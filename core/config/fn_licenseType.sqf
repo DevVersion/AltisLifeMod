@@ -40,7 +40,7 @@ switch (_mode) do
 			case "cement": {_var = "license_civ_cement"};
 			case "mair": {_var = "license_med_air"};
 			case "home": {_var = "license_civ_home"};
-			case "repair" : {_var = "license_civ_repair"};
+			case "aok" : {_var = "license_civ_aok"};
 			default {_var = ""};
 		};
 	};
@@ -73,7 +73,7 @@ switch (_mode) do
 			case "license_civ_cement": {_var = "cement"};
 			case "license_med_air": {_var = "mair"};
 			case "license_civ_home": {_var = "home"};
-			case "license_civ_repair" : {_var = "repair"};
+			case "license_civ_aok" : {_var = "aok"};
 			default {_var = ""};
 		};
 	};
