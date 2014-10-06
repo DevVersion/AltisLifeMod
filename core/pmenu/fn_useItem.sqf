@@ -89,12 +89,15 @@ switch (true) do
 	
 	case (_item == "kidney"):
 	{
-		if(([false,_item,1] call life_fnc_handleInv && player getVariable ["missingOrgan", false])) then
-		{
-			player setVariable["missingOrgan",false,true];
-			life_thirst = 100;
-			life_hunger = 100;
-			player setFatigue .5;
+		if(([false,_item,1] call life_fnc_handleInv) then {
+			if (player getVariable ["missingOrgan", false]) then {
+				player setVariable["missingOrgan",false,true];
+				life_thirst = 100;
+				life_hunger = 100;
+				player setFatigue .5;
+			} else {
+				hint "Du kannst nicht mehr als zwei Nieren besitzen!";
+			};
 		};
 	};
 
