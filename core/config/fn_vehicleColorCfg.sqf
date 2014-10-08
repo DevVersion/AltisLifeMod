@@ -228,6 +228,15 @@ switch (_vehicle) do
 			["textures\vehicles\hemtt_back.jpg", "adac"]
 		];
 	};
+
+
+	case "O_MRAP_02_F":
+	{
+		_ret = 
+		[
+			["textures\vehicles\notarzt_ifrit_teil1.paa", "med", "notarzt_ifrit_teil2.paa"]
+		];
+	};
 	
 	case "I_MRAP_03_F":
 	{

@@ -281,6 +281,7 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "Ion"};
 			case 1: {_color = "Dahoman"};
+			case 2: {_color = "ADAC"};
 		};
 	};
 	
@@ -289,6 +290,14 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Schwarz"};
+		};
+	};
+
+	case "O_MRAP_02_F": 
+	{
+		switch (_index) do 
+		{
+			case 0: {_color = "Notarzt"};
 		};
 	};
 };
