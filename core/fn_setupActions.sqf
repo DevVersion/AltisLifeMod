@@ -32,4 +32,11 @@ switch (playerSide) do
 			(vehicle player isKindOf "Air") && (speed (vehicle player) < 2) && (speed (vehicle player) > -1) && (vehicle player == vehicle player getVariable ["AttachedVehicle", vehicle player]) && (count (nearestObjects [[(getPos vehicle player) select 0, (getPos vehicle player) select 1, 0], ["Car","Truck", "Air"], 5]) > 0) && ((getPos (vehicle player) select 2) < 10) && ((getPos (vehicle player) select 2) > 2.5)
 		']];
 	};
+
+	case independent: {
+		// Drag Player Action
+		life_actions = life_actions + [player addAction ["<t color='#FC9512'>Spieler tragen</t>",{_this spawn life_fnc_dragPlayer},cursorTarget,99,false,true,"","
+			(!alive cursorTarget) && (vehicle cursorTarget == cursorTarget)
+		"]];
+	};
 };

@@ -20,6 +20,7 @@ _unit setVariable["transporting",FALSE,TRUE]; //Why the fuck do I have this? Is 
 _unit setVariable["steam64id",(getPlayerUID player),true]; //Set the UID.
 _unit setVariable["missingOrgan",FALSE,TRUE]; 
 _unit setVariable["hasOrgan",FALSE,TRUE]; 
+_unit setVariable['corpse', life_corpse,TRUE];
 
 //Setup our camera view
 life_deathCamera  = "CAMERA" camCreate (getPosATL _unit);

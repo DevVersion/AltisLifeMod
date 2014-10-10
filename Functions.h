@@ -74,6 +74,9 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
+
+		class dragPlayer {};
+		class dropPlayer {};
 	};
 	
 	class Actions

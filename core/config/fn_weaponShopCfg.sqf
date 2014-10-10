@@ -24,10 +24,10 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
+			case (playerSide != west): {"Du bist kein Polizist!"};
 			default
 			{
-				["Altis Cop Shop",
+				["Polizei Shop",
 					[
 						["arifle_sdar_F","Taser Rifle",20000],
 						["hgun_P07_snds_F","Stun Pistol",2000],
@@ -169,7 +169,7 @@ case "adac_shop":
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian && playerSide != east): {"Du bist kein Zivilist oder ADAC"};
+			case (playerSide == west): {"Polizisten haben für diesen Shop keinen Zugriff"};
 			case (!license_civ_rebel): {"Du hast keine Rebellen Lizenz!"};
 			default
 			{
@@ -209,7 +209,7 @@ case "adac_shop":
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian && playerSide != east): {"Du bist kein ADAC oder Zivilist"};
+			case (playerSide == west): {"Polizisten haben für diesen Shop keinen Zugriff"};
 			case (!license_civ_gun): {"Du hast keinen Waffenschein"};
 			default
 			{

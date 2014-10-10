@@ -19,7 +19,8 @@ switch (_vehicle) do
 		[
 			[_path + "heli_transport_02_1_ion_co.paa","civ",_path + "heli_transport_02_2_ion_co.paa",_path + "heli_transport_02_3_ion_co.paa"],
 			[_path + "heli_transport_02_1_dahoman_co.paa","civ",_path + "heli_transport_02_2_dahoman_co.paa",_path + "heli_transport_02_3_dahoman_co.paa"],
-			["textures\vehicles\mohawk_adac_01.jpg", "adac", "textures\vehicles\mohawk_adac_02.jpg", "textures\vehicles\mohawk_adac_03.jpg"]
+			["textures\vehicles\mohawk_adac_01.jpg", "adac", "textures\vehicles\mohawk_adac_02.jpg", "textures\vehicles\mohawk_adac_03.jpg"],
+			["textures\vehicles\medic_mohawk.paa","medic","#(argb,8,8,3)color(1,1,1,0.8)","#(argb,8,8,3)color(0.9,0.9,0.9,0.7)"]
 		];
 	};
 	
@@ -176,12 +177,12 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa","civ"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa","donate"],
 			["\a3\air_f\Heli_Light_02\Data\heli_light_02_ext_opfor_co.paa","reb"],
-			["textures\vehicles\Notarzt_Orca.jpg", "med"],
+			["textures\vehicles\orca_notarzt.paa", "med"],
 			["textures\vehicles\orca_adac.jpg","adac"]
 		];
 	};
 	
-	case "	B_Heli_Transport_01_F":
+	case "B_Heli_Transport_01_F":
 	{
 		_ret = 
 		[
@@ -206,7 +207,8 @@ switch (_vehicle) do
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"],
 			["textures\vehicles\police_hunter.jpg", "cop"],
 			["textures\vehicles\sek_hunter_01.jpg", "cop", "textures\vehicles\sek_hunter_02.jpg"],
-			["textures\vehicles\Hunter_flecktarn_base.jpg", "cop", "textures\vehicles\Hunter_flecktarn_adds.jpg"]
+			["textures\vehicles\Hunter_flecktarn_base.jpg", "cop", "textures\vehicles\Hunter_flecktarn_adds.jpg"],
+			["textures\vehicles\hunter_notarzt_front1.paa", "med", "textures\vehicles\hunter_notarzt_hinten1.paa"]
 		];
 	};
 	
@@ -226,15 +228,6 @@ switch (_vehicle) do
 		_ret =
 		[
 			["textures\vehicles\hemtt_back.jpg", "adac"]
-		];
-	};
-
-
-	case "O_MRAP_02_F":
-	{
-		_ret = 
-		[
-			["textures\vehicles\notarzt_ifrit_teil1.paa", "med", "notarzt_ifrit_teil2.paa"]
 		];
 	};
 	
