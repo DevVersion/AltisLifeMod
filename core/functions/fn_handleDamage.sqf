@@ -54,7 +54,7 @@ if(!isNull _source) then {
 
 			/* HANDLE CIV,MED,ADAC -> COP,CIV,MED,ADAC */
 			
-			if (side _source != west) then {
+			if (side _source != west && _curWep in ["hgun_P07_snds_F"]) then {
 			
 				private["_distance","_isVehicle","_isQuad"];
 				_distance = if(_projectile == "B_556x45_dual") then {100} else {35};
@@ -73,6 +73,8 @@ if(!isNull _source) then {
 					};
 				};				
 			};
+
+
 		};
 	};
 };
