@@ -1,5 +1,5 @@
 private["_injuredperson","_dragger"];
-_injuredperson = cursorTarget getVariable ["corpse", "noCorpse"];
+_injuredperson = cursorTarget;
 _dragger = vehicle player;
 
 if (_injuredperson == "noCorpse") exitWith { hint "Es ist ein Fehler aufgetreten!" };
