@@ -132,14 +132,18 @@ zlt_fnc_fastropeaiunits = {
 
 
 zlt_fnc_fastrope = {
-	diag_log ["fastrope", _this];
-	zlt_mutexAction = true;
-	sleep random 0.3;
-	if (player == leader group player) then {
-		[vehicle player, units group player] call zlt_fnc_fastropeaiunits;
+	if (!(player getVariable["restrained",FALSE])) then {
+		diag_log ["fastrope", _this];
+		zlt_mutexAction = true;
+		sleep random 0.3;
+		if (player == leader group player) then {
+			[vehicle player, units group player] call zlt_fnc_fastropeaiunits;
+		};
+		player call zlt_fnc_fastropeUnit;
+		zlt_mutexAction = false;
+	} else {
+		hint "Du kannst dich nicht mit Handschellen abseilen!";
 	};
-	player call zlt_fnc_fastropeUnit;
-	zlt_mutexAction = false;
 };
 
 zlt_fnc_fastropeUnit = {
