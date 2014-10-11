@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_keyHandler.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -67,6 +68,10 @@ switch (_code) do
 			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
 			case east: {if(!visibleMap) then {[] spawn life_fnc_adacMarkers;}};
 		};
+
+		if (__GETC__(life_adminlevel) > 1) then {
+			[] spawn life_fnc_adminMarkers;
+		}
 	};
 	
 	//Holster / recall weapon.
@@ -169,19 +174,17 @@ switch (_code) do
 	{
 		//If cop run checks for turning lights on.
 		if(_shift && playerSide in [west,independent,east]) then {
-			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_F","B_MRAP_01_F","C_SUV_01_F", "C_Offroad_01_repair_F"]) then {
-				if(!isNil {vehicle player getVariable "lights"}) then {
-					if(playerSide == west) then {
-						[vehicle player] call life_fnc_sirenLights;
-					};
-					if(playerSide == independent) then {
-						[vehicle player] call life_fnc_medicSirenLights;
-					};
-					if(playerSide == east) then {
-						[vehicle player] call life_fnc_adacSirenLights;
-					};
-					_handled = true;
+			if(vehicle player != player) then {
+				if(playerSide == west) then {
+					[vehicle player] call life_fnc_sirenLights;
 				};
+				if(playerSide == independent) then {
+					[vehicle player] call life_fnc_medicSirenLights;
+				};
+				if(playerSide == east) then {
+					[vehicle player] call life_fnc_adacSirenLights;
+				};
+				_handled = true;
 			};
 		};
 		

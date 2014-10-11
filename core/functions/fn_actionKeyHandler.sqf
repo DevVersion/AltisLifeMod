@@ -43,13 +43,13 @@ life_action_inUse = true;
 _copLevel = call life_coplevel;
 _adminLevel = call life_adminlevel;
 
-//Check if its a dead body.
+/*/Check if its a dead body.
 if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent,east,civilian]}) exitWith {
 	//Hotfix code by ins0
 	if((_adminLevel > 0 || _copLevel > 10) || (playerSide == independent && {"Medikit" in (items player)})) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
-};
+};*/
 
 
 //If target is a player then check if we can use the cop menu.
@@ -96,14 +96,14 @@ if(isPlayer _curTarget && _curTarget isKindOf "Man") then {
 				waitUntil {scriptDone _handle};
 			};
 		} else {
-			//OK, it wasn't a vehicle so let's see what else it could be?
+			//OK, it wasnt a vehicle so lets see what else it could be?
 			if((typeOf _curTarget) in _miscItems) then {
 				//OK, it was a misc item (food,water,etc).
 				private["_handle"];
 				_handle = [_curTarget] spawn life_fnc_pickupItem;
 				waitUntil {scriptDone _handle};
 			} else {
-				//It wasn't a misc item so is it money?
+				//It wasnt a misc item so is it money?
 				if((typeOf _curTarget) == _money && {!(_curTarget getVariable["inUse",false])}) then {
 					private["_handle"];
 					_curTarget setVariable["inUse",TRUE,TRUE];

@@ -56,6 +56,7 @@ class Life_Client_Core
 		class adminQuery {};
 
 		class adminLevel {};
+		class adminMarkers {};
 	};
 
 	class Medical_System
@@ -74,9 +75,6 @@ class Life_Client_Core
 		class medicSirenLights {};
 		class medicLights {};
 		class medicSiren {};
-
-		class dragPlayer {};
-		class dropPlayer {};
 	};
 	
 	class Actions

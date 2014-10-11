@@ -4,6 +4,11 @@
 	Description:
 	Master addAction file handler for all client-based actions.
 */
+private['_copLevel', '_adminLevel'];
+
+_copLevel = call life_coplevel;
+_adminLevel = call life_adminlevel;
+
 switch (playerSide) do
 {
 	case civilian:
@@ -34,9 +39,13 @@ switch (playerSide) do
 	};
 
 	case independent: {
-		// Drag Player Action
-		life_actions = life_actions + [player addAction ["<t color='#FC9512'>Spieler tragen</t>",{_this spawn life_fnc_dragPlayer},cursorTarget,99,false,true,"","
-			(!alive cursorTarget) && (vehicle cursorTarget == cursorTarget)
-		"]];
 	};
+
+};
+
+// REVIVE FOR ADMINS / COPS / MEDICS and so on
+if (_adminLevel > 0 || _copLevel > 11 || (playerSide == independent && {"Medikit" in (items player)})) then {
+	life_actions = life_actions + [player addAction ["<t color='#FC9512'>Spieler wiederbeleben</t>", { [cursorTarget] call life_fnc_revivePlayer; }, "", 0,false, false, "", "
+		cursorTarget isKindOf 'Man' && {!alive cursorTarget} && {playerSide in [west,independent,east,civilian]}
+	"]];
 };
