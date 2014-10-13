@@ -90,7 +90,7 @@ life_market_resources = [
 		] 
 	],
 
-	["marijuana", 5500, 4500, 8500, 4, 4,   
+	["marijuana", 7500, 5500, 9500, 4, 4,   
 		[ 
 			["turtle",1], 
 			["cocainep",1],
@@ -98,7 +98,7 @@ life_market_resources = [
 		] 
 	],
 	
-	["cocainep", 7600, 6500, 12000, 4, 4,   
+	["cocainep", 8400, 7200, 13000, 4, 4,   
 		[ 
 			["marijuana",1], 
 			["turtle",1],
@@ -106,7 +106,7 @@ life_market_resources = [
 		] 
 	],
 
-	["heroinp", 5200, 4200, 10000, 4, 4,   
+	["heroinp", 6500, 5200, 11000, 4, 4,   
 		[ 
 			["marijuana",1], 
 			["turtle",1],
