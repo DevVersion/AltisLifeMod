@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_vInteractionMenu.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -18,7 +19,7 @@ if(!dialog) then {
 };
 disableSerialization;
 _curTarget = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
-if(isNull _curTarget) exitWith {closeDialog 0;}; //Bad target
+if(isNull _curTarget) exitWith {closeDialog 0;};
 _isVehicle = if((_curTarget isKindOf "landVehicle") OR (_curTarget isKindOf "Ship") OR (_curTarget isKindOf "Air")) then {true} else {false};
 if(!_isVehicle) exitWith {closeDialog 0;};
 _display = findDisplay 37400;
@@ -40,6 +41,12 @@ _BtnNumber = 0;
 
 if("ToolKit" in (items player) && (damage _curTarget < 1)) then {(_BtnArray select _BtnNumber) ctrlEnable true;} else {(_BtnArray select _BtnNumber) ctrlEnable false;};
 _BtnNumber = _BtnNumber + 1;
+
+if (__GETC__(life_adminlevel) > 2) then {
+	(_BtnArray select _BtnNumber) ctrlSetText localize "STR_vInAct_Impound";
+	(_BtnArray select _BtnNumber) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_impoundAction;";
+	_BtnNumber = _BtnNumber + 1;
+};
 
 if(playerSide == west) then {
 	(_BtnArray select _BtnNumber) ctrlSetText localize "STR_vInAct_Registration";
