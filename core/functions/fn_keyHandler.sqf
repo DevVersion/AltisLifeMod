@@ -116,9 +116,13 @@ switch (_code) do
 			}
 		};
 
-		if (_shift && playerSide != west && (animationState cursorTarget) == "Incapacitated" && license_civ_rebel && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1 && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "") then {
+		if (_shift && playerSide != west && (animationState cursorTarget) == "Incapacitated" && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1 && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "") then {
 			if (!(player getVariable ["restrained",false])) then {
-				[] call life_fnc_restrainAction;
+				if (license_civ_rebel) then {
+					[] call life_fnc_restrainAction;
+				} else {
+					hint "Spieler können nur von Spielern mit der Rebellenmitgliedschaft festgenommen werden!";
+				};
 			}
 		};
 	};
