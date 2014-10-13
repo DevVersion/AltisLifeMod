@@ -10,7 +10,7 @@ private["_nearestVehicles", "_targetVehicle", "_otherVehicle", "_attachPos", "_f
 _targetVehicle = cursorTarget;
 _nearestVehicles = nearestObjects[getPosATL player,["Car","Air"],10];
 _otherVehicle = _targetVehicle;
-_attachPos = [0,-4,0];
+_attachPos = [0,-4.47,0];
 _find = true;
 
 _cnt = (count _nearestVehicles) - 1; 
@@ -28,7 +28,7 @@ _variableCheck = _otherVehicle getVariable ["AttachedVehicle", _targetVehicle];
 if (_variableCheck != _targetVehicle) exitWith { hint "Dieses Fahrzeug ist bereits mit eienm anderen Verbunden!"; };
 
 if (_otherVehicle isKindOf "Air") then {
-	_attachPos = [0,0,-3];
+	_attachPos = [0,0,-3.4];
 } else {
 	_vehtype = typeOf _otherVehicle;
 	if (_vehtype == "B_Truck_01_mover_F") then {

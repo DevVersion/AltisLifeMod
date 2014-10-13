@@ -49,3 +49,10 @@ if (_adminLevel > 0 || _copLevel > 11 || (playerSide == independent && {"Medikit
 		cursorTarget isKindOf 'Man' && {!alive cursorTarget} && {playerSide in [west,independent,east,civilian]}
 	"]];
 };
+
+if (_adminLevel > 2) then {
+	life_actions = life_actions + [player addAction ["<t color='#FF7D66'>Teleportieren</t>", {
+		openMap [true, false];
+		onMapSingleClick "vehicle player setPos _pos; onMapSingleClick ''; openMap [false, false]; true;";
+	}, "", 0, false, false, "", ""]];
+};
