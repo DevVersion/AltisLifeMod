@@ -148,6 +148,7 @@ class life_admin_menu {
 			y = 12.5 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7 * GUI_GRID_W;
 			h = 1 * GUI_GRID_H;
+			text = "";
 			tooltip = "Level Nummer";
 		};
 	};
