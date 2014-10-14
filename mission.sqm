@@ -2024,58 +2024,23 @@ class Mission
 		};
 		class Item75
 		{
-			side="EAST";
+			side="CIV";
 			class Vehicles
 			{
-				items=4;
+				items=1;
 				class Item0
 				{
-					position[]={8435.126,98.314438,25178.969};
+					position[]={8453.3818,84.3451,25221.348};
+					azimut=29.242399;
 					special="NONE";
-					id=217;
-					side="EAST";
-					vehicle="B_medic_F";
+					id=93;
+					side="CIV";
+					vehicle="C_man_1_3_F";
 					player="PLAY CDG";
 					leader=1;
 					skill=0.60000002;
-					text="adac_1";
-					description="ADAC";
-				};
-				class Item1
-				{
-					position[]={8438.5908,97.827309,25178.916};
-					special="NONE";
-					id=218;
-					side="EAST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="adac_2";
-					description="ADAC";
-				};
-				class Item2
-				{
-					position[]={8435.2344,98.780205,25177.074};
-					special="NONE";
-					id=219;
-					side="EAST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="adac_3";
-					description="ADAC";
-				};
-				class Item3
-				{
-					position[]={8438.6445,98.256561,25177.02};
-					special="NONE";
-					id=220;
-					side="EAST";
-					vehicle="B_medic_F";
-					player="PLAY CDG";
-					skill=0.60000002;
-					text="adac_4";
-					description="ADAC";
+					text="civ_71";
+					description="Zivilist";
 				};
 			};
 		};
@@ -3623,6 +3588,59 @@ class Mission
 					skill=0.60000002;
 					text="reb_1_3_1_1";
 					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false;  this addAction[""Fahrzeug Shop"",life_fnc_vehicleShopMenu,[""reb_car"",civilian,""reb_veh_spawn"",""reb"",""Rebellen Fahrzeuge""],0,false,false,"""",'license_civ_rebel']; this addAction[""Fahrzeug Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Lade Fahrzeuge....""];   life_garage_sp = ""reb_veh_spawn""; life_garage_type = ""Car"";  },"""",0,false,false,"""",'playerSide != west']; this addAction[""Helikopter Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Lade Fahrzeuge....""];   life_garage_sp = ""reb_veh_spawn""; life_garage_type = ""Air"";  },"""",0,false,false,"""",'playerSide != west'];  this addAction[""Fahrzeug in Garage einparken"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+				};
+			};
+		};
+		class Item88
+		{
+			side="EAST";
+			class Vehicles
+			{
+				items=4;
+				class Item0
+				{
+					position[]={8435.126,98.314438,25178.969};
+					id=217;
+					side="EAST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					leader=1;
+					skill=0.60000002;
+					text="adac_1";
+					description="ADAC";
+				};
+				class Item1
+				{
+					position[]={8438.5908,97.827309,25178.916};
+					id=218;
+					side="EAST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="adac_2";
+					description="ADAC";
+				};
+				class Item2
+				{
+					position[]={8435.2344,98.780205,25177.074};
+					id=219;
+					side="EAST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="adac_3";
+					description="ADAC";
+				};
+				class Item3
+				{
+					position[]={8438.6445,98.256561,25177.02};
+					id=220;
+					side="EAST";
+					vehicle="B_medic_F";
+					player="PLAY CDG";
+					skill=0.60000002;
+					text="adac_4";
+					description="ADAC";
 				};
 			};
 		};
