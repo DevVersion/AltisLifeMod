@@ -113,7 +113,7 @@
 	private["_walkDis","_myLastPos","_MaxWalk","_runHunger","_runDehydrate"];
 	_walkDis = 0;
 	_myLastPos = (getPos player select 0) + (getPos player select 1);
-	_MaxWalk = 1200;
+	_MaxWalk = 1650;
 	while{true} do 
 	{
 		sleep 0.5;
