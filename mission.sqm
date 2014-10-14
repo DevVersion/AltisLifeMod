@@ -3600,6 +3600,7 @@ class Mission
 				class Item0
 				{
 					position[]={8435.126,98.314438,25178.969};
+					special="NONE";
 					id=217;
 					side="EAST";
 					vehicle="B_medic_F";
@@ -3612,6 +3613,7 @@ class Mission
 				class Item1
 				{
 					position[]={8438.5908,97.827309,25178.916};
+					special="NONE";
 					id=218;
 					side="EAST";
 					vehicle="B_medic_F";
@@ -3623,6 +3625,7 @@ class Mission
 				class Item2
 				{
 					position[]={8435.2344,98.780205,25177.074};
+					special="NONE";
 					id=219;
 					side="EAST";
 					vehicle="B_medic_F";
@@ -3634,6 +3637,7 @@ class Mission
 				class Item3
 				{
 					position[]={8438.6445,98.256561,25177.02};
+					special="NONE";
 					id=220;
 					side="EAST";
 					vehicle="B_medic_F";
