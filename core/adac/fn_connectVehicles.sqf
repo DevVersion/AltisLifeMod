@@ -10,7 +10,7 @@ private["_nearestVehicles", "_targetVehicle", "_otherVehicle", "_attachPos", "_f
 _targetVehicle = cursorTarget;
 _nearestVehicles = nearestObjects[getPosATL player,["Car","Air"],10];
 _otherVehicle = _targetVehicle;
-_attachPos = [0,-4.47,0];
+_attachPos = [0,-5.24,0];
 _find = true;
 
 _cnt = (count _nearestVehicles) - 1; 
