@@ -27,17 +27,6 @@ if(isDedicated && isNil("life_market_prices")) then {
 
 [] spawn life_fnc_fastRope;
 
-// OPFOR && BLUFOR && INDEPENDENT FRIENDS
-Resistance setFriend [East, 0];
-East setFriend [Resistance, 0];
-
-West setFriend [Resistance, 0];
-Resistance setFriend [West, 0];
-
-West setFriend [East, 0];
-East setFriend [West, 0];
-
-
 StartProgress = true;
 
 "BIS_fnc_MP_packet" addPublicVariableEventHandler {_this call life_fnc_MPexec};
