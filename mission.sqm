@@ -2602,7 +2602,7 @@ class Mission
 					side="WEST";
 					vehicle="B_diver_F";
 					skill=0.60000002;
-					init="this allowDamage false; removeallWeapons this; this enableSimulation false; this addAction[""Diving Shop"",life_fnc_clothingMenu,""dive""]; this addAction[format[""%1 ($%2)"",[""license_civ_dive""] call life_fnc_varToStr,[([""dive""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide != west '];";
+					init="this allowDamage false; removeallWeapons this; this enableSimulation false; this addAction[""Taucher Shop"",life_fnc_clothingMenu,""dive""]; this addAction[format[""%1 ($%2)"",[""license_civ_dive""] call life_fnc_varToStr,[([""dive""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide != west '];";
 				};
 				class Item43
 				{
@@ -3109,7 +3109,7 @@ class Mission
 					side="WEST";
 					vehicle="B_diver_F";
 					skill=0.60000002;
-					init="this allowDamage false; removeallWeapons this; this enableSimulation false; this addAction[""Diving Shop"",life_fnc_clothingMenu,""dive""]; this addAction[format[""%1 ($%2)"",[""license_civ_dive""] call life_fnc_varToStr,[([""dive""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide != west '];";
+					init="this allowDamage false; removeallWeapons this; this enableSimulation false; this addAction[""Taucher Shop"",life_fnc_clothingMenu,""dive""]; this addAction[format[""%1 ($%2)"",[""license_civ_dive""] call life_fnc_varToStr,[([""dive""] call life_fnc_licensePrice)] call life_fnc_numberText],life_fnc_buyLicense,""dive"",0,false,false,"""",' !license_civ_dive && playerSide != west '];";
 				};
 				class Item87
 				{
