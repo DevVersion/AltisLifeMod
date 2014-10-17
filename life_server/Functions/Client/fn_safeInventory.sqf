@@ -16,7 +16,7 @@ lbClear _tInv;
 lbClear _pInv;
 
 _safeInfo = _safe getVariable["safe",-1];
-if(_safeInfo < 1) exitWith {closeDialog 0; hint "The safe is empty!";};
+if(_safeInfo < 1) exitWith {closeDialog 0; hint "Der Safe ist leer!";};
 
 _str = ["goldbar"] call life_fnc_varToStr;
 _shrt = ["life_inv_goldbar",1] call life_fnc_varHandle;
