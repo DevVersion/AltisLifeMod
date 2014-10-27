@@ -1,3 +1,4 @@
+#include <macro.h>
 /*
 	File: fn_adminLevel.sqf
 	Author: Paul Gschwendtner
@@ -6,6 +7,8 @@
 	Change Life_Level Script by Paul Gschwendtner
 */
 private["_unit", "_variable", "_level"];
+
+if(__GETC__(life_adminlevel) < 3) exitWith {hint "Du hast für das Level setzten keine Rechte!"};
 
 _unit = lbData[2902,lbCurSel (2902)];
 _unit = call compile format["%1", _unit];

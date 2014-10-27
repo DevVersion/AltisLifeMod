@@ -88,22 +88,22 @@ switch (playerSide) do
 {
 	case west: 
 	{
-		life_atmcash = 70000; //Starting Bank Money
-		life_paycheck = 4500; //Paycheck Amount
+		life_atmcash = 20000; //Starting Bank Money
+		life_paycheck = 2500; //Paycheck Amount
 	};
 	case civilian: 
 	{
-		life_atmcash = 70000; //Starting Bank Money
-		life_paycheck = 2500; //Paycheck Amount
+		life_atmcash = 20000; //Starting Bank Money
+		life_paycheck = 600; //Paycheck Amount
 	};
 	
 	case independent: {
-		life_atmcash = 70000; //Starting Bank Money
-		life_paycheck = 7500;
+		life_atmcash = 20000; //Starting Bank Money
+		life_paycheck = 2500;
 	};
 	case east: {
-		life_atmcash = 70000;
-		life_paycheck = 7500;
+		life_atmcash = 20000;
+		life_paycheck = 2500;
 	};	
 };
 
@@ -288,7 +288,7 @@ life_weapon_shop_array =
 	["ToolKit",75],
 	["FirstAidKit",65],
 	["Medikit",450],
-	["NVGoggles",980],
+	["NVGoggles",0],
 	["16Rnd_9x21_Mag",15],
 	["20Rnd_556x45_UW_mag",35],
 	["ItemMap",35],

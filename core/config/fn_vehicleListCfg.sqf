@@ -104,14 +104,14 @@ switch (_shop) do
 		_return =
 		[
 			["C_Van_01_box_F",73000],
-			["I_Truck_02_transport_F",133500],
-			["I_Truck_02_covered_F",166500],
-			["B_Truck_01_transport_F",266000],
-			["O_Truck_03_transport_F",400000],
-			["B_Truck_01_box_F",666000],
-			["O_Truck_03_device_F",866000],
-			["B_Truck_01_fuel_F",1000000],
-			["O_Truck_03_fuel_F",1200000]
+			["I_Truck_02_transport_F",167500],
+			["I_Truck_02_covered_F",266500],
+			["B_Truck_01_transport_F",366000],
+			["O_Truck_03_transport_F",500000],
+			["B_Truck_01_box_F",766000],
+			["O_Truck_03_device_F",966000],
+			["B_Truck_01_fuel_F",1240000],
+			["O_Truck_03_fuel_F",1440000]
 		];	
 	};
 	
