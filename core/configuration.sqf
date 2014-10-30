@@ -275,7 +275,7 @@ buy_array =
 	["defusekit",2500],
 	["storagesmall",75000],
 	["storagebig",150000],
-	["kidney",75000]
+	["kidney",85000]
 ];
 __CONST__(buy_array,buy_array);
 
