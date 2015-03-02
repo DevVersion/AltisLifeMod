@@ -85,7 +85,7 @@ switch (_shop) do
 		if(__GETC__(life_adaclevel) > 4) then {
 			_return pushBack ["O_Heli_Light_02_unarmed_F", 380000];
 			_return pushBack ["I_Heli_Transport_02_F", 800000];
-			_return pushBack ["O_Heli_Transport_04_repair_F"; 1100000];
+			_return pushBack ["O_Heli_Transport_04_repair_F", 1100000];
 		};
 	};
 	
