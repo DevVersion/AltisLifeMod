@@ -11,16 +11,6 @@ if(player diarySubjectExists "rules")exitwith{};
 //player createDiarySubject ["terrorrules","Terrorism Rules"];
 player createDiarySubject ["controls","Steuerung"];
 
-/*  Example
-	player createDiaryRecord ["", //Container
-		[
-			"", //Subsection
-				"
-				TEXT HERE<br/><br/>
-				"
-		]
-	];
-*/
 	player createDiaryRecord ["controls",
 		[
 			"",
@@ -31,8 +21,9 @@ player createDiarySubject ["controls","Steuerung"];
 
 				Z: Player Menü <br/>
 				U: Abschließen und Aufsperren<br/>
-				T: Fahrzeug Kofferraum<br/>
+				T: Fahrzeug Kofferraum (Auf das Fahrzeug zeigen)<br/>
 				Links Shift + R: Festnehmen (Vorher Niederschlagen..)<br/>
+				Q: Spitzhacke benutzen<br/>
 				Links Shift + G: Niederschlagen (Ausrauben und Festnehmen)<br/>
 				Links Windows Taste: Haupt Interaktions-Menü<br/>
 				Links Shift + H: Waffe wegstecken</br>

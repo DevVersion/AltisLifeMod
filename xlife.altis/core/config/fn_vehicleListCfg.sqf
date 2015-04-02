@@ -51,13 +51,13 @@ switch (_shop) do
 	
 	case "med_air_hs": {
 		if(__GETC__(life_medicLevel) > 1) then {
-			_return pushBack ["B_Heli_Light_01_F",133000];
+			_return pushBack ["B_Heli_Light_01_F",533000];
 		};
 		if(__GETC__(life_medicLevel) > 3) then {
-			_return pushBack ["O_Heli_Light_02_unarmed_F",380000];
+			_return pushBack ["O_Heli_Light_02_unarmed_F",800000];
 		};
 		if(__GETC__(life_medicLevel) > 4) then {
-			_return pushBack ["I_Heli_Transport_02_F",900000];
+			_return pushBack ["I_Heli_Transport_02_F",1333000];
 			_return pushBack ["O_Heli_Transport_04_medevac_F", 900000];
 		};
 	};
@@ -80,12 +80,11 @@ switch (_shop) do
 		};
 
 		if(__GETC__(life_adaclevel) > 3) then {
-			_return pushBack ["B_Heli_Light_01_F", 133000];
+			_return pushBack ["B_Heli_Light_01_F", 270000];
 		};
 		if(__GETC__(life_adaclevel) > 4) then {
-			_return pushBack ["O_Heli_Light_02_unarmed_F", 380000];
-			_return pushBack ["I_Heli_Transport_02_F", 800000];
-			_return pushBack ["O_Heli_Transport_04_repair_F", 1100000];
+			_return pushBack ["O_Heli_Light_02_unarmed_F", 600000];
+			_return pushBack ["I_Heli_Transport_02_F", 663000];
 		};
 	};
 	
@@ -173,7 +172,7 @@ switch (_shop) do
 	case "cop_air":
 	{
 		if(__GETC__(life_coplevel) > 3) then {
-			_return pushBack ["B_Heli_Light_01_F",466000];
+			_return pushBack ["B_Heli_Light_01_F",533000];
 		};
 		if(__GETC__(life_coplevel) > 5) then {
 			_return pushBack ["I_Heli_light_03_unarmed_F",733000];
@@ -186,7 +185,7 @@ switch (_shop) do
 	
 	case "cop_airhq":
 	{
-		_return pushBack ["B_Heli_Light_01_F",466000];
+		_return pushBack ["B_Heli_Light_01_F",533000];
 
 		if(__GETC__(life_coplevel) > 5) then {
 			_return pushBack ["I_Heli_light_03_unarmed_F",733000];
