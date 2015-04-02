@@ -32,6 +32,7 @@ life_removeWanted = false;
 
 // PREVENT SPEED CLICK
 allowedToSell = true;
+allowedToChop = true;
 
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?

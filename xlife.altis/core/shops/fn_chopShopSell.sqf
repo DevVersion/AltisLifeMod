@@ -7,6 +7,16 @@
 */
 disableSerialization;
 private["_control","_price","_vehicle","_nearVehicles","_price2"];
+
+if(!allowedToChop) exitWith {hint "Du kannst ein Fahrzeug nur alle 60 Sekunden verkaufen";};
+if(allowedToChop) then {
+	allowedToChop = false;
+	[] spawn {
+		sleep 60;
+		allowedToChop = true;
+	};	
+};
+
 _control = ((findDisplay 39400) displayCtrl 39402);
 _price = _control lbValue (lbCurSel _control);
 _vehicle = _control lbData (lbCurSel _control);
