@@ -15,10 +15,16 @@ _vid = lbValue[2802,(lbCurSel 2802)];
 _pid = getPlayerUID player;
 _unit = player;
 
-if (life_action_inUse) exitWith {};
-if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
+if(!allowedToSell) exitWith { hint "Du kannst ein Fahrzeug nur alle 20 Sekunden verkaufen"; closeDialog 0; };
+if(allowedToSell) then {
+	allowedToSell = false;
+	[] spawn {
+		sleep 20;
+		allowedToSell = true;
+	};	
+};
 
-life_action_inUse = true;
+if(isNil "_vehicle") exitWith {hint localize "STR_Garage_Selection_Error"};
 
 _price = [_vehicle,__GETC__(life_garage_sell)] call TON_fnc_index;
 if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_sell) select _price) select 1;};
@@ -27,6 +33,5 @@ if(_price == -1) then {_price = 1000;} else {_price = (__GETC__(life_garage_sell
 [[1,format[localize "STR_Garage_SoldCar",_price]],"life_fnc_broadcast",player,false] spawn life_fnc_MP;
 life_atmcash = life_atmcash + _price;
 
-life_action_inUse = false;
 
 closeDialog 0;

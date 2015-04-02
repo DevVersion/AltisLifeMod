@@ -30,6 +30,9 @@ life_interrupted = false;
 life_respawned = false;
 life_removeWanted = false;
 
+// PREVENT SPEED CLICK
+allowedToSell = true;
+
 //Persistent Saving
 __CONST__(life_save_civ,FALSE); //Save weapons for civs?
 __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?
@@ -77,8 +80,8 @@ life_cash = 0;
 __CONST__(life_impound_car,3050);
 __CONST__(life_impound_boat,2050);
 __CONST__(life_impound_air,8050);
-__CONST__(life_ADACimpound_car,30000);
-__CONST__(life_ADACimpound_air,37000);
+__CONST__(life_ADACimpound_car,6500);
+__CONST__(life_ADACimpound_air,12000);
 life_istazed = false;
 life_my_gang = ObjNull;
 
