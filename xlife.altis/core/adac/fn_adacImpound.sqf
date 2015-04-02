@@ -58,12 +58,14 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		life_impound_inuse = true;
 		[[_vehicle,true,player],"TON_fnc_vehicleStore",false,false] spawn life_fnc_MP;
 		waitUntil {!life_impound_inuse};
-		hint format[localize "STR_NOTF_Impounded",_type,_price];
 		[[0,format[localize "STR_NOTF_HasImpounded",profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
-		life_atmcash = life_atmcash + _price;
-	}
-		else
-	{
+		if ((_vehicleData select 0) select 1 == profileName) then {
+			hint "Weil das dein eigenes Fahrzeug ist hast du kein Geld erhalten.";
+		} else {
+			hint format[localize "STR_NOTF_Impounded",_type,_price];
+			life_atmcash = life_atmcash + _price;
+		};
+	} else {
 		hint localize "STR_NOTF_ImpoundingCancelled";
 	};
 };

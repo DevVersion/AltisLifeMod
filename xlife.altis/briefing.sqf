@@ -40,3 +40,16 @@ player createDiarySubject ["controls","Steuerung"];
 				"
 		]
 	];
+
+// TEAMSPEAK
+player createDiarySubject ["teamspeak","Teamspeak"];
+
+	player createDiaryRecord ["teamspeak",
+		[
+			"",
+				"
+				Teamspeak IP: <b>rc.wg-minecraft.de</b><br/>
+				<i>Vorübergehende Teamspeak Adresse</i>
+				"
+		]
+	];
