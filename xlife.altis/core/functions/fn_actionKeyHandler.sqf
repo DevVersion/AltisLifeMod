@@ -43,13 +43,12 @@ life_action_inUse = true;
 _copLevel = call life_coplevel;
 _adminLevel = call life_adminlevel;
 
-/*/Check if its a dead body.
 if(_curTarget isKindOf "Man" && {!alive _curTarget} && {playerSide in [west,independent,east,civilian]}) exitWith {
 	//Hotfix code by ins0
-	if((_adminLevel > 0 || _copLevel > 10) || (playerSide == independent && {"Medikit" in (items player)})) then {
+	if((_adminLevel > 2 || _copLevel > 10) || playerSide == independent) then {
 		[_curTarget] call life_fnc_revivePlayer;
 	};
-};*/
+};
 
 
 //If target is a player then check if we can use the cop menu.

@@ -43,13 +43,6 @@ switch (playerSide) do
 
 };
 
-// REVIVE FOR ADMINS / COPS / MEDICS and so on
-if (_adminLevel > 2 || _copLevel > 11 || (playerSide == independent && {"Medikit" in (items player)})) then {
-	life_actions = life_actions + [player addAction ["<t color='#FC9512'>Spieler wiederbeleben</t>", { [cursorTarget] call life_fnc_revivePlayer; }, "", 0,false, false, "", "
-		cursorTarget isKindOf 'Man' && {!alive cursorTarget} && {playerSide in [west,independent,east,civilian]}
-	"]];
-};
-
 if (_adminLevel > 2) then {
 	life_actions = life_actions + [player addAction ["<t color='#FF7D66'>Teleportieren</t>", {
 		openMap [true, false];

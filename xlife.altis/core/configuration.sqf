@@ -24,7 +24,7 @@ life_bail_paid = false;
 life_impound_inuse = false;
 life_action_inUse = false;
 life_spikestrip = ObjNull;
-life_respawn_timer = 1; //Scaled in minutes
+life_respawn_timer = 1.3; //Scaled in minutes
 life_knockout = false;
 life_interrupted = false;
 life_respawned = false;
@@ -308,7 +308,7 @@ life_weapon_shop_array =
 	["acc_flashlight",100],
 	["srifle_EBR_F",15000],
 	["arifle_TRG21_F",3500],
-	["optic_MRCO",5000],
+	["optic_MRCO",1000],
 	["optic_Aco",850],
 	["arifle_MX_F",7500],
 	["arifle_MXC_F",5000],

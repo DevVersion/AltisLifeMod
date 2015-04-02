@@ -13,7 +13,7 @@ if(life_action_inUse) exitWith {}; //Action is in use, exit to prevent spamming.
 
 //Find out what zone we're near
 {
-	if(player distance (getMarkerPos _x) < 30) exitWith {_zone = _x;};
+	if(player distance (getMarkerPos _x) < 50) exitWith {_zone = _x;};
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {

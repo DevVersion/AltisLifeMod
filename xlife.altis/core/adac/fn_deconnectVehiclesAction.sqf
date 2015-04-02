@@ -19,17 +19,6 @@ _otherVehicle = _targetVehicle getVariable ["AttachedVehicle", _targetVehicle];
 
 if (_otherVehicle == _targetVehicle) exitWith { hint "Es ist kein Fahrzeug mit diesem Fahrzeug verbunden!"; };
 
-_vehPos = getPos _otherVehicle;
-
-
-/* NOTICE THIS IS FOR SETUPACTIONS NOT VInteractionMENU 
-_ZeroPos = [(_vehPos select 0) + 7.3, (_vehPos select 1) + 7.3, 0];  */
-
-_ZeroPos = [_vehPos select 0, _vehPos select 1, 0];  
-
-
-
-_otherVehicle setPosATL _ZeroPos;
 detach _otherVehicle;
 
 _targetVehicle setVariable ["AttachedVehicle", nil];

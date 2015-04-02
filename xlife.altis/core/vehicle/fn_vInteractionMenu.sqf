@@ -39,7 +39,7 @@ _BtnNumber = 0;
 (_BtnArray select _BtnNumber) ctrlSetText localize "STR_vInAct_Repair";
 (_BtnArray select _BtnNumber) buttonSetAction "[life_vInact_curTarget] spawn life_fnc_repairTruck;";
 
-if("ToolKit" in (items player) && (damage _curTarget < 1)) then {(_BtnArray select _BtnNumber) ctrlEnable true;} else {(_BtnArray select _BtnNumber) ctrlEnable false;};
+if(((playerSide == east) || "ToolKit" in (items player)) && (damage _curTarget < 1)) then {(_BtnArray select _BtnNumber) ctrlEnable true;} else {(_BtnArray select _BtnNumber) ctrlEnable false;};
 _BtnNumber = _BtnNumber + 1;
 
 if(playerSide == west) then {

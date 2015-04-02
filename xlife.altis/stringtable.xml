@@ -886,9 +886,9 @@
 			<Portuguese>Taxa de Armazenamento</Portuguese>
 		</Key>
 		<Key ID="STR_Garage_NoVehicles">
-			<Original>No vehicles found in garage.</Original>
-			<English>No vehicles found in garage.</English>
-			<German>Keine Fahrzeuge in der Garage gefunden.</German>
+			<Original>No vehicles in garage.</Original>
+			<English>No vehicles in garage.</English>
+			<German>Keine Fahrzeuge in der Garage</German>
 			<French>Aucuns Vehicules.</French>	
 			<Italian>Non hai veicoli nel Garage.</Italian>			
 			<Portuguese>Nenhum veiculo encontrado na garagem.</Portuguese>
