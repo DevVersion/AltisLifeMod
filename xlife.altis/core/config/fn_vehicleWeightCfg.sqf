@@ -39,7 +39,7 @@ switch (_className) do
 	case "B_G_Boat_Transport_01_F": {65};
 	case "B_Boat_Transport_01_F": {65};
 	case "O_Truck_03_transport_F": {570};
-	case "O_Truck_03_covered_F": {1000};
+	case "O_Truck_03_covered_F": {700};
 	case "B_Truck_01_mover_F":  {450};
 	case "O_Truck_03_device_F": {750};
 	case "B_Truck_01_fuel_F": {900};
@@ -49,6 +49,6 @@ switch (_className) do
 	case "I_MRAP_03_hmg_F": {104};
 	case "I_Heli_light_03_unarmed_F": {300};
 	case "B_Heli_Transport_01_F": {320};
-	case "O_Truck_03_fuel_F": {1150};
+	case "O_Truck_03_fuel_F": {800};
 	default {-1};
 };
