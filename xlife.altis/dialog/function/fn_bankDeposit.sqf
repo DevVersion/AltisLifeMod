@@ -17,6 +17,10 @@ if(_value > life_cash) exitWith {hint localize "STR_ATM_NotEnoughCash"};
 life_cash = life_cash - _value;
 life_atmcash = life_atmcash + _value;
 
+if (_value > 100000) then {
+	[[format["%1 (%2) hat %3 in die Bank eingezahlt", profileName, getPlayerUID player, _value]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+};
+
 hint format[localize "STR_ATM_DepositMSG",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;

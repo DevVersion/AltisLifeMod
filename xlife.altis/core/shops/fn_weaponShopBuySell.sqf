@@ -52,16 +52,25 @@ if((uiNamespace getVariable["Weapon_Shop_Filter",0]) == 1) then
 			_funds = _funds - _price;
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[_item,true] spawn life_fnc_handleItem;
+
+			[[format["%1 (%2) hat eine %3 für %4 vom Gang Konto gekauft.", profileName, getPlayerUID player, _itemInfo select 1, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+
 			[[1,grpPlayer],"TON_fnc_updateGang",false,false] spawn life_fnc_MP;
 		} else {
 			if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 			hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
 			__SUB__(life_cash,_price);
+
+			[[format["%1 (%2) hat eine %3 für %4 gekauft.", profileName, getPlayerUID player, _itemInfo select 1, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+
 			[_item,true] spawn life_fnc_handleItem;
 		};
 	} else {
 		if(_price > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"};
 		hint parseText format[localize "STR_Shop_Weapon_BoughtItem",_itemInfo select 1,[_price] call life_fnc_numberText];
+
+		[[format["%1 (%2) hat eine %3 für %4 gekauft.", profileName, getPlayerUID player, _itemInfo select 1, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+
 		life_cash = life_cash - _price;
 		[_item,true] spawn life_fnc_handleItem;
 	};

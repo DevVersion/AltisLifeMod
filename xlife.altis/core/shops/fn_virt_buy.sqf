@@ -48,15 +48,22 @@ if(([true,_type,_amount] call life_fnc_handleInv)) then
 			_funds = _funds - (_price * _amount);
 			grpPlayer setVariable["gang_bank",_funds,true];
 			[[1,grpPlayer],"TON_fnc_updateGang",false,false] spawn life_fnc_MP;
+
+			[[format["%1 (%2) hat %3x %4 für %5 vom Gangkonto gekauft.", profileName, getPlayerUID player, _amount, _name, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
 		} else {
 			if((_price * _amount) > life_cash) exitWith {[false,_type,_amount] call life_fnc_handleInv; hint localize "STR_NOTF_NotEnoughMoney";};
 			hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 			__SUB__(life_cash,_price);
+
+			[[format["%1 (%2) hat %3x %4 für %5 gekauft.", profileName, getPlayerUID player, _amount, _name, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
 		};
 	} else {
 		if((_price * _amount) > life_cash) exitWith {hint localize "STR_NOTF_NotEnoughMoney"; [false,_type,_amount] call life_fnc_handleInv;};
 		hint format[localize "STR_Shop_Virt_BoughtItem",_amount,_name,[(_price * _amount)] call life_fnc_numberText];
 		__SUB__(life_cash,(_price * _amount));
+
+		[[format["%1 (%2) hat %3x %4 für %5 gekauft.", profileName, getPlayerUID player, _amount, _name, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+
 		if(_marketprice != -1) then { 
 			[_type, _amount] spawn {
 				sleep 120;

@@ -28,4 +28,9 @@ life_cash = life_cash - (parseNumber(_amount));
 [[_unit,_amount,player],"life_fnc_receiveMoney",_unit,false] spawn life_fnc_MP;
 [] call life_fnc_p_updateMenu;
 
+
+if (_amount > 100000) then {
+	[[format["%1 (%2) hat %3 an %4 (%5) überwiesen (bar).", profileName, getPlayerUID player, _amount, name _unit, getPlayerUID _unit]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+};
+
 ctrlShow[2001,true];

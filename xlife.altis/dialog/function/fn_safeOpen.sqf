@@ -11,12 +11,15 @@ if(isNull life_safeObj) exitWith {};
 if(playerSide == west) exitWith {};
 if((life_safeObj getVariable["safe",-1]) < 1) exitWith {hint localize "STR_Civ_VaultEmpty";};
 if((life_safeObj getVariable["inUse",false])) exitWith {hint localize "STR_Civ_VaultInUse"};
-if({side _x == west} count playableUnits < 2) exitWith {hint localize "STR_Civ_NotEnoughCops"};
+if({side _x == west} count playableUnits < 4) exitWith {hint localize "STR_Civ_NotEnoughCops"};
 if(!createDialog "Federal_Safe") exitWith {localize "STR_MISC_DialogError"};
 disableSerialization;
 ctrlSetText[3501,(localize "STR_Civ_SafeInv")];
 [life_safeObj] call life_fnc_safeInventory;
 life_safeObj setVariable["inUse",true,true];
+
+[[format["%1 hat den Banktresor geöffnet", profileName]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+
 [life_safeObj] spawn
 {
 	waitUntil {isNull (findDisplay 3500)};

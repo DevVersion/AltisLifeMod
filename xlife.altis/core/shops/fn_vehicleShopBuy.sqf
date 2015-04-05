@@ -34,10 +34,12 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	};
 };
 
-
 if(_spawnPoint == "") exitWith {hint localize "STR_Shop_Veh_Block";};
 life_cash = life_cash - _basePrice;
+
 hint format[localize "STR_Shop_Veh_Bought",getText(configFile >> "CfgVehicles" >> _className >> "displayName"),[_basePrice] call life_fnc_numberText];
+
+[[format["%1 (%2) hat ein %3 für %4 gekauft.", profileName, getPlayerUID player, getText(configFile >> "CfgVehicles" >> _className >> "displayName"), _basePrice]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
 
 //Spawn the vehicle and prep it.
 if((life_veh_shop select 0) == "med_air_hs") then {

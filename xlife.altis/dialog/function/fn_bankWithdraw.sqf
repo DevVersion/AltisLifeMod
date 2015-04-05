@@ -11,6 +11,11 @@ if(_val < 100 && life_atmcash > 20000000) exitWith {hint localize "STR_ATM_Withd
 
 life_cash = life_cash + _val;
 life_atmcash = life_atmcash - _val;
+
+if (_val > 100000) then {
+	[[format["%1 (%2) hat %3 von der Bank abgehoben", profileName, getPlayerUID player, _val]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+};
+
 hint format [localize "STR_ATM_WithdrawSuccess",[_val] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial;

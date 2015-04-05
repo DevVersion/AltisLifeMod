@@ -34,6 +34,8 @@ if(([false,_type,_amount] call life_fnc_handleInv)) then
 	hint format[localize "STR_Shop_Virt_SellItem",_amount,_name,[_price] call life_fnc_numberText];
 	life_cash = life_cash + _price;
 
+	[[format["%1 (%2) hat %3x %4 für %5 verkauft.", profileName, getPlayerUID player, _amount, _name, _price]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+
     if(_marketprice != -1) then {
     	[_type, _amount] spawn {
     		sleep 120;

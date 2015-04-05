@@ -19,6 +19,10 @@ _gFund = grpPlayer getVariable ["gang_bank",0];
 _gFund = _gFund + _value;
 grpPlayer setVariable ["gang_bank",_gFund,true];
 
+if (_value > 100000) then {
+	[[format["%1 (%2) hat %3 in die Gangbank eingezahlt", profileName, getPlayerUID player, _value]],"TON_fnc_xLogger",false,false] spawn life_fnc_MP;  
+};
+
 hint format[localize "STR_ATM_DepositGang",[_value] call life_fnc_numberText];
 [] call life_fnc_atmMenu;
 [6] call SOCK_fnc_updatePartial; //Silent Sync
